@@ -5,7 +5,6 @@
         <v-col
           v-for="article in data"
           :key="article.id"
-          cols="2"
         >
           <router-link :to="{
             name: 'fullnews',
