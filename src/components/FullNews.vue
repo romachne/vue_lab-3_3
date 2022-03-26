@@ -6,47 +6,21 @@
       <img :src="baseUrl + '/images/' + $route.params.full_image" alt="">
       <p>{{$route.params.desc}}</p>
     </v-container>
-    <v-form>
-      <v-container>
-        <v-col>
-          <v-text-field
-            v-model="message"
-            :append-outer-icon="'mdi-send'"
-            filled
-            clear-icon="mdi-close-circle"
-            clearable
-            label="Комментарий"
-            type="text"
-            @click:append-outer="sendMessage"
-            @click:clear="clearMessage"
-          ></v-text-field>
-        </v-col>
-      </v-container>
-    </v-form>
+    <comments-block/>
   </v-main>
 </template>
 
 <script>
+import CommentsBlock from "@/components/CommentsBlock";
 
 export default {
   name: 'FullNews',
-  data: () => ({
-    message: 'Привет!',
-    iconIndex: 0,
-    baseUrl: window.location.origin
-  }),
-  methods: {
-    sendMessage() {
-      this.resetIcon()
-      this.clearMessage()
-    },
-    clearMessage() {
-      this.message = ''
-    },
-    resetIcon() {
-      this.iconIndex = 0
-    }
+  components: {
+    CommentsBlock
   },
+  data: () => ({
+    baseUrl: window.location.origin
+  })
 }
 
 </script>

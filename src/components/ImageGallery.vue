@@ -45,7 +45,7 @@
 
 <script>
 export default {
-  name: 'AllNews',
+  name: 'ImageGallery',
   data () {
     return {
       data: [],

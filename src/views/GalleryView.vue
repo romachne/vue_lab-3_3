@@ -1,14 +1,14 @@
 <template>
-  <gallery/>
+  <image-gallery/>
 </template>
 
 <script>
-import Gallery from "@/components/Gallery";
+import ImageGallery from "@/components/ImageGallery";
 
 export default {
   name: 'GalleryView',
   components: {
-    Gallery
+    ImageGallery
   }
 }
 </script>
